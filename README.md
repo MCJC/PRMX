@@ -1,0 +1,2 @@
+# RelPob
+En este sitio trabajaremos las modificaciones y ampliaciones a un tema de Omeka 2.x donde queremos desplegar mapas interactivos de la relación de diversas mediciones de pobreza y algunas variables religiosas. Esperamos que sea un sitio que ofrezca recursos y espacio de diálogo respecto a esta temática de las ciencias sociales, para lo cual la plataforma informática será particularmente útil.
