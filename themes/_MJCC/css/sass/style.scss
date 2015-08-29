@@ -1,0 +1,49 @@
+@import 'susyone';
+@import 'compass/css3';
+@import 'compass/typography';
+@import "compass/support";
+@import 'normalize';
+
+/* == Support == */
+
+$legacy-support-for-ie8: true;
+
+/* == Variables == */
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$relative-font-sizing: true;
+
+$total-columns  : 9;
+$column-width   : 5em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+$break          : 48em 16;
+
+/* == Mixins == */
+
+@mixin body-copy {
+    line-height: $base-line-height;
+    @include trailer(1, $base-font-size);
+}
+
+@mixin boxsizing($bs) {
+    $bs: unquote($bs);
+    @include experimental(box-sizing, $bs, -moz, -webkit, not -o, not -ms, not -khtml, official);
+    *behavior: url('../javascripts/boxsizing.htc');
+}
+
+// screen --------------------------------------------------------------------
+@media screen {
+  @import "screen";
+}
+
+// 768px  --------------------------------------------------------------------
+@media screen and (min-width: 768px) {
+  @import "screen_768"; 
+}
+
+// print ---------------------------------------------------------------------
+@media print {
+  @import "print";
+}

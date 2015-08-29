@@ -1,0 +1,236 @@
+#site-title {
+    width:50%;
+    float: left;
+    text-align: left;
+    padding: rhythm() 0 rhythm() $gutter-width;
+}
+
+div#search-container {
+    @include span-columns(3 omega, 12);
+    clear: none;
+    @include leader(1.25);
+    padding-right: $gutter-width;
+}
+
+.center-div {
+    margin: 0 gutter(2);
+}
+
+#header .center-div {
+    position: relative;
+    padding: 0;
+}
+
+#primary-nav {
+    overflow: visible;
+    padding: 0;
+
+    /*
+
+    li {
+
+        &:hover {
+
+        ul {
+            min-width: 200px;
+            display: none;
+            padding: 0;
+            position: absolute;
+            top: -2px;
+            left: 0px;
+            margin-top:40px;
+            background: lighten(#000000, 15%);
+            z-index: 1000;
+            
+            li {
+                width: 100%;
+                clear: both;
+                
+                @include box-sizing(border-box);
+                
+                ul {
+                position: absolute;
+                left: 100%;
+                margin-top: 0;
+                }
+            }
+          }
+    } */
+
+    /* mega menu list */
+    .nav-menu {
+        display: block;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 15;
+        width: 100%;
+        background-color: #000;
+        float: left;
+    }
+
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* first descendant link within a top level navigation item */
+    .nav-item > a {
+        position: relative;
+        margin: 0 0 -1px 0;
+        color:#868D4A;
+        display:block;
+        float:left;
+        padding:10px;
+    }
+
+    /* open state of first descendant link within a top level 
+       navigation item */
+    .nav-item > a.open {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-bottom: none;
+        z-index: 1;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+        position: absolute;
+        display: none;
+        top: rhythm(2.125);
+        margin-top: -1px;
+        padding: 0.5em 1em;
+        border: 1px solid #dedede;
+        border-top: 0;
+        background-color: #fff;
+        z-index: 2;
+    }
+
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: block;
+    }
+
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        display: block;
+        vertical-align: top;
+        margin: 0 1em 0 0;
+        padding: 0 0 0 1em;
+    }
+
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sub-nav a {
+        padding: rhythm(.5);
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .mobile {
+        display:none;
+    }
+}
+
+#footer {
+    margin: 0 gutter(2);
+}
+
+#content {
+     padding: rhythm() $gutter-width;
+}
+
+#home #content {
+
+    & > div {
+        @include span-columns(8 omega, 12);
+    }
+
+    #recent-items {
+        float:left;
+        overflow:hidden;
+        padding:.5em 0;
+        @include span-columns(4 alpha, 12, 1em);
+        background:#D3D6BD;
+    }
+}
+
+.pagination {
+    margin: 0 0 rhythm(.5);
+}
+
+/*Search Results */
+
+#footer {
+    min-height:30px;
+}
+
+.featured,
+#featured-exhibit {
+    @include span-columns(8 omega, 12);
+    clear: right;
+}
+
+#recent-items {
+    width: columns(4);
+}
+
+#intro {width:800px/968px * 100%;}
+
+/* Advanced Search */
+.field {
+    @include span-columns(8 alpha);
+    @include trailer();
+
+    label,
+    .label {
+        @include span-columns(2 alpha, 8);
+        @include trailer();
+    }
+    
+    .inputs {
+        @include span-columns(6 omega, 8);
+        vertical-align: top;
+        
+        & > *:only-child {
+            width: 100%;
+        }
+    }
+}
+
+.search-entry {
+    @include trailer();
+}
+
+.pagination-nav {
+    float: left;
+}
+
+#sort-links {
+    text-align: right;
+
+    span, ul {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    
+    span, a {
+        padding: rhythm(.75) 0;
+        margin: 0 0 0 1em;
+    }
+}
+/* Items */
+
+.item-description {clear:none}

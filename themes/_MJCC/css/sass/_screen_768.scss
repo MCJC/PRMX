@@ -1,0 +1,244 @@
+/* @group ----- Grid ----- */
+
+#content { 
+    @include span-columns(12 omega, 16); 
+    padding: 40px 0; 
+}
+
+#primary-nav { 
+    @include span-columns(4 alpha,16); 
+}
+
+#primary { 
+    @include prefix(0);
+}
+
+#home #primary { 
+    @include span-columns(6 alpha,12); 
+    padding: 0 0 0 gutter();
+}
+
+#home #secondary { 
+    @include span-columns(6 omega,12); 
+    padding: 0 gutter();
+}
+
+/* @end */
+
+/* @group ----- Header ----- */
+
+header { 
+    background-size: cover !important; 
+    -ms-behavior: url('../javascripts/backgroundsize.min.htc');
+    border-width: 0 0 20px 0;
+    border-style: solid;
+}
+
+.menu-button { display: none; }
+
+#primary-nav { 
+    @include leader(1.75);
+
+    .active ul {
+        display: block;
+    }
+  
+    ul { 
+        @include leader(0); 
+        @include trailer(2);
+    }
+    
+    a:hover {           
+        font-weight: bold;
+    }
+}
+
+#search-form {
+    @include trailer();
+}
+
+#query {
+    @include trailer();
+}
+
+.secondary-nav, #secondary-nav {
+    border-bottom:1px solid #ccc;
+    font-size:1.125em; 
+    
+    a {
+        padding: 0.5em 1em 0.5em; 
+        color: #666;
+        border-bottom: 0;
+    }
+    
+    ul { margin: 0 0 -1px 0; }
+    
+    li { 
+        display: inline-block;
+        padding: 0; 
+        border: 1px solid #ccc;
+    }
+    
+    .active {
+        border-bottom-color: #fff;
+    }
+    
+    .current a {
+        background:#fff;
+        color:#333; 
+        font-weight:bold;
+        border: {
+            color: #ccc;
+            width: 1px;
+            style: solid;
+            bottom: { color: #fff; }; 
+        }
+    }
+}
+
+/* == Browse Items == */
+
+.pagination { 
+    width: 47%; 
+    overflow: hidden;
+    float: left;
+    @include padding-trailer();
+}
+
+nav.pagination {
+	overflow: visible;
+}
+
+#content > nav.pagination:nth-of-type(2) { 
+	width: 47%; 
+}
+
+.pagination_list {
+    @include leader(.75);
+    float: left;
+}
+
+.pagination_list a, li.pagination_current { 
+    border: 1px solid #ccc;
+    display: inline-block; 
+    padding: rhythm(.25) 10px;
+    vertical-align: top;
+    margin-right: 10px; 
+}
+
+#sort-links  {
+    clear: none;
+    float: right;
+    ul { 
+        @include leader(.75); 
+        @include padding-leader(.5);
+    }
+    span, li {
+        padding: rhythm(.25) 0 rhythm(.25) 20px;
+        margin-right: 0;
+    }
+}
+
+/* @end */
+
+/* @group ----- Forms ----- */
+
+div#contribution-type-form div.inputs {
+    clear: none;
+    float: right;
+    width: 69%; 
+}    
+    
+.field {
+    border-bottom:1px solid #ccc;
+    width:100%;
+    overflow: auto;
+    padding: rhythm(1) 0;
+
+    .inputs,
+    .columns.omega { 
+        clear: none;
+        float: right;
+        width: 69%; 
+    }
+
+    input, input[type=text], select { 
+        width: 100%; 
+        float: right;
+    }
+    
+    .search-entry input[type=text],
+    .search-entry select {
+        width: 28%;
+        display: inline-block;
+        float: left;
+        margin: 0 3px 0 0;
+    }
+    
+    .remove_search {
+        margin-top: 0;
+        float: right;
+        clear: none;
+    }
+    
+    label, 
+    .label,
+    .columns.alpha {
+        width: 29%;
+        float: left;
+        margin: 0;
+    }
+    
+    .columns.alpha label,
+    .columns.alpha .label {
+        width: 100%;
+    }
+
+    div.field:last-of-type { display: inline-block; margin-bottom: 1em; }
+    
+    div :only-child { margin-bottom: 0; }
+    
+}
+    
+/* @end */
+
+/* @group ----- Advanced Search Form ----- */
+
+#advanced-search-form {
+    margin-bottom: 40px;
+    
+    button { 
+        clear: both;
+        width: auto;
+        margin-left: 31%;
+    }
+    
+    .submit { float: right; }
+}
+
+/* @end */
+
+/* @group ----- Exhibit Builder ----- */
+
+#content nav + .exhibit {
+    clear: both;
+}
+
+#exhibit-blocks,
+.exhibits.summary #primary,
+#exhibit-page-navigation {
+    @include span-columns(9 alpha, 12);
+    float: left;
+}
+
+#exhibit-page-navigation {
+    clear: none;
+}
+
+#exhibit-pages {
+    @include span-columns(3 omega, 12);
+    display: inline-block;
+    float: none;
+}
+
+/* @end */

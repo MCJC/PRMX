@@ -1,0 +1,46 @@
+#site-title img {
+    max-width: 100%;
+}
+
+.navigation {
+    position: relative;
+}
+
+.navigation li {
+    display: block;
+    width: 100%;
+    border-color: rgba(255,255,255,.15);
+    @include trailing-border(1px, 0, $base-font-size, solid);
+    
+    a {
+        width: 100%;
+    }
+    
+    &:last-of-type {
+        border-color: transparent;
+    }
+}
+
+#admin-bar .navigation li {
+    display: inline-block;
+    border-color: transparent;
+}
+
+.sub-nav.open {
+    width: 100%;
+    min-width: 0;
+}
+
+.search-entry {
+    @include trailer();
+}
+
+.search-entry select, 
+.search-entry input[type=text] {
+    display: block;
+    width: 100%;
+}
+
+#content {
+    padding: rhythm() 0;
+}
